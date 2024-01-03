@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppConfig.shared.appName),
+        title: Text("hello".tr),
       ),
       body: Center(
         child: Column(

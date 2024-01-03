@@ -6,7 +6,7 @@ class LocaleStringDev extends Translations {
     'en_US': {
       'hello': 'Hello World',
       'hint_text': 'You have pushed the button this many times',
-      'change_language': 'Choose Your Language',
+      // 'change_language': 'Choose Your Language',
       'increment': 'Increment'
     },
     'hi_IN': {

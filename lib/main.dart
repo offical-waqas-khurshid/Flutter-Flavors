@@ -33,7 +33,6 @@ class MyApp extends StatelessWidget {
               theme: AppConfig.shared.themeData == ThemeDataEnum.dev
                   ? appThemeDev()
                   : appTheme(),
-              title: 'Flutter Flavor Example',
               home: const HomePage(),
             ));
   }
