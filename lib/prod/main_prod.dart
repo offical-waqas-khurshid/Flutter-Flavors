@@ -10,6 +10,7 @@ void main() async {
       primaryColor: Colors.red,
       flavor: Flavor.prod,
       themeData: ThemeDataEnum.prod,
+      locale: LocaleEnum.prod,
       localization: LocalizationEnum.prod,
       imagePath: 'assets/prod/man.png');
 

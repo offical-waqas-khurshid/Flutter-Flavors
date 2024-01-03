@@ -4,6 +4,8 @@ enum Flavor { prod, dev }
 
 enum ThemeDataEnum { prod, dev }
 
+enum LocaleEnum { prod, dev }
+
 enum LocalizationEnum { prod, dev }
 
 class AppConfig {
@@ -13,6 +15,7 @@ class AppConfig {
   Flavor flavor;
   ThemeDataEnum themeData;
   LocalizationEnum localization;
+  LocaleEnum locale;
   String imagePath;
 
   static AppConfig shared = AppConfig.create();
@@ -24,10 +27,11 @@ class AppConfig {
     Flavor flavor = Flavor.dev,
     ThemeDataEnum themeData = ThemeDataEnum.dev,
     LocalizationEnum localization = LocalizationEnum.dev,
+    LocaleEnum locale  = LocaleEnum.dev,
     String imagePath = "assets/prod/man.png",
   }) {
     return shared = AppConfig._internal(appName, baseUrl, primaryColor, flavor,
-        themeData, imagePath, localization);
+        themeData, imagePath, localization, locale);
   }
 
   AppConfig._internal(
@@ -38,6 +42,7 @@ class AppConfig {
     this.themeData,
     this.imagePath,
     this.localization,
+      this.locale
   );
 
   /// Create the Image.asset widget using the stored asset path

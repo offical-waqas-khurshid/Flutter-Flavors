@@ -12,10 +12,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List locale = [
+  final List localeDev = [
     {'name': 'ENGLISH', 'locale': const Locale('en', 'US')},
     {'name': 'हिंदी', 'locale': const Locale('hi', 'IN')},
     {'name': 'Arabic', 'locale': const Locale('ar', 'SA')},
+    {'name': 'Urdu', 'locale': const Locale('ur', 'PK')},
+  ];
+  final List localeProd = [
+    {'name': 'ENGLISH', 'locale': const Locale('en', 'US')},
+    {'name': 'हिंदी', 'locale': const Locale('hi', 'IN')},
   ];
   updateLanguage(Locale locale) {
     Get.back();
@@ -35,11 +40,11 @@ class _HomePageState extends State<HomePage> {
                     return InkWell(
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(locale[index]['name']),
+                        child: Text("${AppConfig.shared.locale == LocaleEnum.dev ? localeDev[index]['locale'] : localeProd[index]['locale']}"),
                       ),
                       onTap: () {
                         //print(locale[index]['name']);
-                        updateLanguage(locale[index]['locale']);
+                        updateLanguage(AppConfig.shared.locale == LocaleEnum.dev ? localeDev[index]['locale'] : localeProd[index]['locale']);
                       },
                     );
                   },
@@ -48,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.blue,
                     );
                   },
-                  itemCount: locale.length),
+                  itemCount: AppConfig.shared.locale == LocaleEnum.dev ? localeDev.length : localeProd.length),
             ),
           );
         });

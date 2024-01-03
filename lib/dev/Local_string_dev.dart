@@ -20,6 +20,10 @@ class LocaleStringDev extends Translations {
       'hint_text': 'لقد ضغطت على الزر عدة مرات',
       'change_language': 'اختر لغتك',
       'increment': 'زيادة راتب'
+    },
+    'ur_PK': {
+      'hello': 'ہیلو',
+      'change_language': 'زبان تبدیل کریں',
     }
   };
 }

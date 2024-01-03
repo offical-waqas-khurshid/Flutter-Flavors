@@ -15,11 +15,5 @@ class LocaleStringProd extends Translations {
       'change_language': 'अपनी भाषा चुनिए',
       'increment': 'वृद्धि'
     },
-    'ar_SA': {
-      'hello': 'مرحبا بالعالم',
-      'hint_text': 'لقد ضغطت على الزر عدة مرات',
-      'change_language': 'اختر لغتك',
-      'increment': 'زيادة راتب'
-    }
   };
 }
