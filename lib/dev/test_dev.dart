@@ -5,4 +5,5 @@ class TestClassDev implements FlavorFun {
   String fun() {
     return "Dev flavor";
   }
+
 }

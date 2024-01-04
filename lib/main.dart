@@ -5,14 +5,12 @@ import 'package:flutter_flovars/prod/Local_string_prod.dart';
 import 'package:flutter_flovars/prod/theme_utils/app_theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'AppConfig.dart';
 import 'HomePage.dart';
 
 void main() async {
-  // await AppConfig.shared.initialize();
   runApp(MyApp());
 }
 

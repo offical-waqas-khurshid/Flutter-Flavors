@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flovars/Function_calling.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'AppConfig.dart';
@@ -90,6 +91,11 @@ class _HomePageState extends State<HomePage> {
                   },
                   child: Text('change_language'.tr)),
             ),
+
+            ElevatedButton(onPressed: (){
+              FunctionCalling.instance.navigateToScreen(context);
+            }, child: const Text("Navigate"))
+
           ],
         ),
       ),
