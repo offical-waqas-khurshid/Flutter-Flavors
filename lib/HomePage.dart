@@ -95,7 +95,6 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(onPressed: (){
               FunctionCalling.instance.navigateToScreen(context);
             }, child: const Text("Navigate"))
-
           ],
         ),
       ),
