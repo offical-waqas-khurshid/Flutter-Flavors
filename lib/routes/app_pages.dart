@@ -1,13 +1,4 @@
-import 'package:flutter_flovars/Beneficiary/bindings/beneficiary_binding.dart';
-import 'package:flutter_flovars/Beneficiary/views/beneficiary_view.dart';
-import 'package:flutter_flovars/Direct_payment/bindings/direct_payment_binding.dart';
-import 'package:flutter_flovars/Direct_payment/views/direct_payment_view.dart';
-import 'package:flutter_flovars/Home/bindings/home_binding.dart';
-import 'package:flutter_flovars/Home/views/home_view.dart';
-import 'package:flutter_flovars/Login/bindings/login_binding.dart';
-import 'package:flutter_flovars/Login/views/login_view.dart';
-import 'package:flutter_flovars/own_Transfer/bindings/own_transfer_binding.dart';
-import 'package:flutter_flovars/own_Transfer/views/own_transfer_view.dart';
+
 import 'package:get/get.dart';
 
 import '../dev/Beneficiary_Dev/bindings/beneficiary_dev_binding.dart';
@@ -88,31 +79,6 @@ class AppPages {
       name: _Paths.DIRECT_PAYMENT_PROD,
       page: () => const DirectPaymentProdView(),
       binding: DirectPaymentProdBinding(),
-    ),
-    GetPage(
-      name: _Paths.LOGIN,
-      page: () => const LoginView(),
-      binding: LoginBinding(),
-    ),
-    GetPage(
-      name: _Paths.BENEFICIARY,
-      page: () => const BeneficiaryView(),
-      binding: BeneficiaryBinding(),
-    ),
-    GetPage(
-      name: _Paths.OWN_TRANSFER,
-      page: () => const OwnTransferView(),
-      binding: OwnTransferBinding(),
-    ),
-    GetPage(
-      name: _Paths.DIRECT_PAYMENT,
-      page: () => const DirectPaymentView(),
-      binding: DirectPaymentBinding(),
-    ),
-    GetPage(
-      name: _Paths.HOME,
-      page: () => const HomeView(),
-      binding: HomeBinding(),
     ),
   ];
 }

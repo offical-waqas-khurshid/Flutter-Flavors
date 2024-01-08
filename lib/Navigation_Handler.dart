@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flovars/AppConfig.dart';
-import 'package:flutter_flovars/Login/views/login_view.dart';
 import 'package:flutter_flovars/dev/Beneficiary_Dev/views/beneficiary_dev_view.dart';
-import 'package:flutter_flovars/dev/Home_Dev/views/home_dev_view.dart';
 import 'package:flutter_flovars/dev/Login_Dev/views/login_dev_view.dart';
 import 'package:flutter_flovars/dev/Own_Transfer_Dev/views/own_transfer_dev_view.dart';
 import 'package:flutter_flovars/prod/Beneficiary_Prod/views/beneficiary_prod_view.dart';
