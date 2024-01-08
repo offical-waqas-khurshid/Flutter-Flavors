@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flovars/Navigation_Handler.dart';
-import 'package:flutter_flovars/dev/Local_string_dev.dart';
+import 'package:flutter_flovars/dev/theme_utils/Local_string_dev.dart';
 import 'package:flutter_flovars/dev/theme_utils/app_theme_dev.dart';
-import 'package:flutter_flovars/prod/Local_string_prod.dart';
+import 'package:flutter_flovars/prod/theme_utils/Local_string_prod.dart';
 import 'package:flutter_flovars/prod/theme_utils/app_theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
