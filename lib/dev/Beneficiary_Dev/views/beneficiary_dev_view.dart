@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_flovars/Navigation_Handler.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/home_prod_controller.dart';
+import '../controllers/beneficiary_dev_controller.dart';
 
-class HomeProdView extends GetView<HomeProdController>  {
-  const HomeProdView({super.key});
+class BeneficiaryDevView extends GetView<BeneficiaryDevController> {
+  const BeneficiaryDevView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeProdView'),
+        title: const Text('BeneficiaryDevView'),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          'HomeProdView is working',
+          'BeneficiaryDevView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

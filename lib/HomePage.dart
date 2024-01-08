@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flovars/Function_calling.dart';
+import 'package:flutter_flovars/Navigation_Handler.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -93,7 +94,12 @@ class _HomePageState extends State<HomePage> {
             ),
 
             ElevatedButton(onPressed: (){
-              FunctionCalling.instance.navigateToScreen(context);
+
+
+               NavigationHandler.instance.navigation(ScreenTypes.login.name);
+
+              // NavigationHandler.instance.navigation(ScreenTypes.home.name);
+              // FunctionCalling.instance.navigateToScreen(context);
             }, child: const Text("Navigate"))
           ],
         ),

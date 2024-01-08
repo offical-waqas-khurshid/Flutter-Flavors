@@ -11,7 +11,8 @@ void main() async {
       flavor: Flavor.prod,
       themeData: ThemeDataEnum.prod,
       locale: LocaleEnum.prod,
-      screenView: ScreensViewEnum.prod,
+      //screenType: ScreenTypes.login,
+      //screenView: ScreensViewEnum.prod,
       localization: LocalizationEnum.prod,
       imagePath: 'assets/prod/man.png');
 

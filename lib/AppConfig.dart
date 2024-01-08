@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 enum Flavor { prod, dev }
-
+enum ScreenTypes {login, beneficiary, ownTransfer, directPayment, home}
 enum ThemeDataEnum { prod, dev }
 
 enum LocaleEnum { prod, dev }
 
 enum LocalizationEnum { prod, dev }
-enum ScreensViewEnum { prod, dev }
 
 class AppConfig {
   String appName;
@@ -18,7 +17,6 @@ class AppConfig {
   LocalizationEnum localization;
   LocaleEnum locale;
   String imagePath;
-  ScreensViewEnum screenView;
   static AppConfig shared = AppConfig.create();
 
   factory AppConfig.create({
@@ -29,11 +27,10 @@ class AppConfig {
     ThemeDataEnum themeData = ThemeDataEnum.dev,
     LocalizationEnum localization = LocalizationEnum.dev,
     LocaleEnum locale = LocaleEnum.dev,
-    ScreensViewEnum screenView =  ScreensViewEnum.dev,
     String imagePath = "assets/prod/man.png",
   }) {
     return shared = AppConfig._internal(appName, baseUrl, primaryColor, flavor,
-        themeData, imagePath, localization, locale, screenView);
+        themeData, imagePath, localization, locale);
   }
 
   AppConfig._internal(
@@ -45,7 +42,6 @@ class AppConfig {
       this.imagePath,
       this.localization,
       this.locale,
-      this.screenView,
      );
 
   /// Create the Image.asset widget using the stored asset path

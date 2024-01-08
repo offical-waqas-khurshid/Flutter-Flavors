@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_flovars/Navigation_Handler.dart';
 import 'package:flutter_flovars/dev/Local_string_dev.dart';
 import 'package:flutter_flovars/dev/theme_utils/app_theme_dev.dart';
 import 'package:flutter_flovars/prod/Local_string_prod.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
               theme: AppConfig.shared.themeData == ThemeDataEnum.dev
                   ? appThemeDev()
                   : appTheme(),
-              home: const HomePage(),
+              home: HomePage(),
             ));
   }
 }

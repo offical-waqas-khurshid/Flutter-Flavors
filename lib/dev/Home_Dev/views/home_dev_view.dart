@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
 import '../controllers/home_dev_controller.dart';
 
-class HomeDevView  extends GetView<HomeDevController> {
-  const HomeDevView({super.key});
+class HomeDevView extends GetView<HomeDevController> {
+  dynamic arguments;
+
+  HomeDevView([this.arguments = const {}]);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

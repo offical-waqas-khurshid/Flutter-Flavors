@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_flovars/Navigation_Handler.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/home_prod_controller.dart';
+import '../controllers/direct_payment_dev_controller.dart';
 
-class HomeProdView extends GetView<HomeProdController>  {
-  const HomeProdView({super.key});
+class DirectPaymentDevView extends GetView<DirectPaymentDevController> {
+  const DirectPaymentDevView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeProdView'),
+        title: const Text('DirectPaymentDevView'),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          'HomeProdView is working',
+          'DirectPaymentDevView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),

@@ -4,9 +4,6 @@ import 'package:flutter_flovars/Flavor_fun.dart';
 import 'package:flutter_flovars/dev/test_dev.dart';
 import 'package:flutter_flovars/prod/Home_Prod/views/home_prod_view.dart';
 import 'package:flutter_flovars/prod/test_prod.dart';
-import 'package:flutter_flovars/routes/app_pages.dart';
-import 'package:get/get.dart';
-
 import 'dev/Home_Dev/views/home_dev_view.dart';
 
 class FunctionCalling {
@@ -24,10 +21,10 @@ class FunctionCalling {
     Flavor.prod.name: TestClassProd(),
   };
 
-
+  /// Navigation Screens based on flavors
   Map<String, Widget> navigationMap = {
-    Flavor.dev.name: HomeDevView(),
-    Flavor.prod.name: HomeProdView(),
+    Flavor.dev.name:  HomeDevView(),
+    Flavor.prod.name: const HomeProdView(),
   };
 
 
@@ -37,7 +34,7 @@ class FunctionCalling {
   }
 
   /// function that return controllers of flavor
-  Object? navigateToScreen(BuildContext context) {
+   navigateToScreen(BuildContext context) {
     if (AppConfig.shared.flavor == Flavor.dev) {
       Navigator.push(
         context,
@@ -49,7 +46,6 @@ class FunctionCalling {
         MaterialPageRoute(builder: (context) => HomeProdView()),
       );
     } else {
-      // Handle unsupported flavor
       return Container();
     }
   }
