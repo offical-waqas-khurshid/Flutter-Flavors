@@ -21,7 +21,7 @@ class NavigationHandler {
 
   Map<String, Map<String, Widget Function(dynamic)>> navigationMapTest = {
     ScreenTypes.login.name: {
-      Flavor.dev.name: (argument) => LoginDevView(),
+      Flavor.dev.name: (argument) => LoginProdView(),
       Flavor.prod.name: (argument) => LoginProdView(),
     },
     ScreenTypes.beneficiary.name: {

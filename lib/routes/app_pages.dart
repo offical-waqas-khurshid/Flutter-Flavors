@@ -42,7 +42,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.LOGIN_DEV,
-      page: () => const LoginDevView(),
+      page: () => const LoginProdView(),
       binding: LoginDevBinding(),
     ),
     GetPage(
