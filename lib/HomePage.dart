@@ -94,12 +94,7 @@ class _HomePageState extends State<HomePage> {
             ),
 
             ElevatedButton(onPressed: (){
-
-
                NavigationHandler.instance.navigation(ScreenTypes.login.name);
-
-              // NavigationHandler.instance.navigation(ScreenTypes.home.name);
-              // FunctionCalling.instance.navigateToScreen(context);
             }, child: const Text("Navigate"))
           ],
         ),
