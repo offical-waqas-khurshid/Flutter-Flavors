@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_flovars/Navigation_Handler.dart';
-import 'package:flutter_flovars/dev/theme_utils/Local_string_dev.dart';
-import 'package:flutter_flovars/dev/theme_utils/app_theme_dev.dart';
-import 'package:flutter_flovars/prod/theme_utils/Local_string_prod.dart';
-import 'package:flutter_flovars/prod/theme_utils/app_theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'AppConfig.dart';
-import 'HomePage.dart';
+import 'Common/src/config_path_file/AppConfig.dart';
+import 'Common/src/routes/app_pages.dart';
 
 void main() async {
   runApp(MyApp());
@@ -25,12 +20,11 @@ class MyApp extends StatelessWidget {
         useInheritedMediaQuery: true,
         builder: (BuildContext context, Widget? child) =>
             GetMaterialApp(
-              translations: AppConfig.shared.localization == LocalizationEnum.dev ? LocaleStringDev() : LocaleStringProd(),
+              translations: AppConfig.translationMap[Flavor.dev.name],
               locale: const Locale('en', 'US'),
-              theme: AppConfig.shared.themeData == ThemeDataEnum.dev
-                  ? appThemeDev()
-                  : appTheme(),
-              home: HomePage(),
+              theme: AppConfig.appThemeMap[Flavor.dev.name],
+              initialRoute: AppPages.INITIAL,
+              getPages: AppPages.routes,
             ));
   }
 }
