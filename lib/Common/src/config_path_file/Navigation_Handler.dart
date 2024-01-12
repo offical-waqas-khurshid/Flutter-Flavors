@@ -27,7 +27,7 @@ class NavigationHandler {
     },
   };
 
-  /// function that return screen type widget / view
+  /// function that return screen type widget / views
   navigation(String screenType, [dynamic argument]) {
     Get.offAll(navigationMap[screenType]![AppConfig.shared.flavor.name]!(
         argument));
